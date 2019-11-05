@@ -19,7 +19,124 @@
     <title>Employee</title>
   </head>
   <body>
-    <h1>Employee Account Page</h1>
+    <!--navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">JDBC TRMS</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="employeeAcct.html">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Employee Account Hero-->
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to your Account</h1>
+      <p class="lead">
+        Here you can view your account details, previous requests, and status.
+      </p>
+      <hr class="my-4" />
+
+      <a class="btn btn-primary btn-lg" href="#" role="button"
+        >Account Details</a
+      >
+    </div>
+    <!--Account Nav -->
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col d-flex justify-content-center">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#acctDetails"
+                >Acccount Details</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#requestHist">Request History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#lastReqStat">Request Status</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--Account sections-->
+    <section>
+      <div class="container" id="acctDetails">
+        <div class="row acct-details">
+          <div class="col"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--Request History-->
+    <section>
+      <div class="container" id="requestHist">
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+            <h3>Request History</h3>
+          </div>
+        </div>
+        <div class="row request-history">
+          <div class="col">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Request #</th>
+                  <th scope="col">Event Date</th>
+                  <th scope="col">Event Name</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>09/03/2019</td>
+                  <td>CSA Certification</td>
+                  <td>Approved</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>10/02/2019</td>
+                  <td>OCA Certification</td>
+                  <td>Approved</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>11/3/2019</td>
+                  <td>CSA Certification</td>
+                  <td>Approved</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Last Request Status-->
+    <section>
+      <div class="container" id="lastReqStat">
+        <div class="row last-status">
+          <div class="col"></div>
+        </div>
+      </div>
+    </section>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

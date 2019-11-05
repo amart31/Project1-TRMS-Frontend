@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Reimbursement Form</title>
+  </head>
+  <body>
+    <!--navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">JDBC TRMS</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="employeeAcct.html">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Reimbursement Form-->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+            <h3>
+              Reimbursement Request Form
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="container cont-reqForm">
+        <div class="row">
+          <div class="col my-4">
+            <form id="form" action="form" method="POST">
+              <input
+                type="hidden"
+                id="estReimbAmt"
+                name="estReimbAmt"
+                value=""
+              />
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="employeeIdRform">Employee ID</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="employeeIdRform"
+                    placeholder="Employee ID"
+                  />
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="employeeDeptRform">Employee Department</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="employeeDeptRform"
+                    placeholder="Employee Department"
+                  />
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="currentDate">Today's Date</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="currentDate"
+                    name="currentDate"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="eventName">Event Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="eventName"
+                    placeholder="Event Name"
+                  />
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="eventDate">Event Date</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="eventDate"
+                    placeholder="Event Date"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="eventLoction">Event Location</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="eventLoction"
+                  placeholder="1234 Main St"
+                />
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="reimbursementtype">Event Type:</label>
+                  <select
+                    name="eventgroup"
+                    class="form-control"
+                    id="reimbursementtype"
+                    required="required"
+                  >
+                    <option value="203" selected="selected"
+                      >Certification</option
+                    >
+                    <option value="200">University Courses</option>
+                    <option value="201">Seminars</option>
+                    <option value="202"
+                      >Certification Preparation Classes</option
+                    >
+
+                    <option value="204">Technical Training</option>
+                    <option value="205">Others</option>
+                  </select>
+                </div>
+                <!-- Reimbursement Cost -->
+                <div class="form-group col-md-3">
+                  <label for="reimbursementcost">Request Amount:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="reimbursementcost"
+                    step="0.01"
+                    max="1000"
+                    placeholder="Enter amount "
+                    required="required"
+                  />
+                </div>
+
+                <!-- Reimbursement Amount -->
+                <div class="form-group col-md-3">
+                  <label for="reimbursementamount"
+                    >Estimated Reimbursement Amount:
+                  </label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="reimbursementamount"
+                    id="reimbursementamount"
+                    max="1000"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="eventDescription">Event Description</label>
+                <textarea
+                  class="form-control"
+                  id="eventDescription"
+                  rows="3"
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="eventDescription">Event Justification</label>
+                <textarea
+                  class="form-control"
+                  id="eventDescription"
+                  rows="2"
+                ></textarea>
+              </div>
+              <!-- File Attachment -->
+              <label for="attachedfile">Attach Supporting Documents:</label>
+              <input
+                type="file"
+                id="attachedfile"
+                name="attachedfile"
+                accept=".pdf, .png, .jpeg, .jpg, .txt, .doc, .msg"
+              />
+
+              <button type="submit" class="btn btn-primary">
+                Submit Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="form.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

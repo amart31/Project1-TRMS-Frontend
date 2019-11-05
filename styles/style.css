@@ -1,3 +1,19 @@
-h1 {
-    color: aquamarine;
+.car-img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.form-cont {
+    width: 50vw;
+    margin: auto;
+}
+.login-form {
+    border: 2px black;
+    border-radius: 10px;
+
+}
+
+
+.form-check-label {
+    margin-right: 25px;
 }
